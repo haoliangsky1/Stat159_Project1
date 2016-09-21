@@ -1,0 +1,146 @@
+![](../images/stat159-logo.png)
+
+
+# Abstract
+
+This is a paper about how I make use of the computational tools covered so far in the course in order to complete this project assignment.
+
+
+In this paper, I will talk about some of the essential tools and the roles they play in reproducible workflow, including `Makefile`, `Git`, `GitHub`, `pandoc`, and `Markdown`.
+
+
+Also, I will talk about the resources that I used in order to complete this job, the relatively straightforward and more challenge parts in the process.
+
+
+# Introduction
+
+Surfing on the edge of exploding information and data, the need for reproducible approach of scientific research is growing. This paper is trying to answer some of the very basic questions in reproducibility: what are some important tools, and what roles do they play in the reproducible workflow.
+
+
+In the following paragraphs, we will discuss `Markdown` and how it modularized and simplifies the compiling process; `Git` and how this version control system helps to track development and enable collaborative working style; `GitHub` and how its source code management system and distributed version control makes collaboration and open source projects more accessible; `pandoc` and how it helps scholarly writing and workflow publishing; and `Markdown` and how it makes formatting on computer as easy as on paper.
+
+
+# Discussion
+Here we can discuss about the following tools and their roles in the reproducible workflow.
+
+## Makefile
+
+In most of open-source projects, `Makefile` is an essential file. It should contain a set of directives used with the *make* build automation tool. There are usually five types contents that makefiles contain:
+
+1: Explicit rules: saying when and how to remake one or more files in the related project, which are called the rule’s targets. They list the other files that the targets depend on, called the prerequisites of the target, and some also give a recipe so as for users to create, update and customize the target for their own need.
+
+2: Implicit rules: saying when and how to remake a class of files based on their names. They usually describe how a target may depend on a file with a name similar to the target and gives a recipe to create or update such a target.
+
+3: Variable definition: a line that specifies a text string value for a variable that can be substituted into the text later.
+
+4: Directive: an instruction for make to do something special while reading the makefile such as reading another makefile.
+
+5: Comments: start with `#` in a makefile. 
+
+
+In the context of reproducible workflow, makefile provides users with simple access to the project materials and results. Compiling the source code files can be exhausting, especially when multiple source files of different types are involved in the compiling process. If new users were not familiar with the projects, as in most cases, the process could be even more intimidating. Makefiles are a solution to simplify this task.
+
+
+In a project, makefiles essentially work as a rigorous way of recording each step as the researchers or developers were doing it, enabling anyone to reproduce the entire process later. As long as the entire workflow or pipeline stays stable, any update to the project, including new data, different methods or better algorithms, could be easily added. 
+---
+
+## Git: 
+![](../images/git-logo.png)
+
+`Git` is a version control system that is used for software development and other version control tasks. As Linus Torvalds, its original author said that as a distributed revision control system, Git is aimed at speed, data integrity, and support for distributed, nonlinear workflows. 
+
+Before Git, developers used to have carefully commented on the version of their codes so that they can keep track of the changes or updates they made to the files.
+Using Git, every developer’s computer stores the entire history of the entire project as a “repository”, which enables developers to use Git locally even without internet connection. Because its nature of version control, Git allows a team of developers to collaborate on the same files without interfering other coworkers' progress.
+
+![](../images/Git_operations.png)
+
+
+With the graph of Git’s data structure above, we may have a better understanding about the commands it uses, and how the versions of our files flow from local working directory, to branches, and to the remote.
+
+
+---
+
+
+## GitHub 
+![](../images/github-logo.png)
+
+
+`GitHub` is a web-based Git repository hosting service. It offers all of the distributed version control and source code management functionality of Gi as well as adding its own features. It provides access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project
+
+## Pandoc
+![](../images/pandoc-logo.png)
+
+
+`Pandoc` is a document converter, widely used as a writing tool and as a basis for publishing workflows.
+
+1: Pandoc is doing extremely well when different markdown syntax extensions are involved, especially for scholarly works. It provides multiple different methods of rendering math, including MathJax, translation to MathML and Microsoft Word-based LaTeX math. It also includes a powerful system for automatic citation and bibliographies with pandoc-citeproc.
+
+2:Pandoc offers relatively simple way to convert the most popular document formats smoothly, including markdown, pdf, HTML, raw text and so on.
+
+---
+
+## Markdown
+![](../images/markdown-logo.png)
+
+
+`Markdown` is a lightweight markup language with plain text formatting syntax designed so that it can converted to HTML, pdf, raw text and many other formats using a tool by the same name. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
+
+## Project Completion Process
+In the process of completing the entire project, I was going through the following steps:
+
+1: I create a new project on my GitHub account called `Stat159-Project1`
+
+2: Then clone the remote repository to my local address using command
+```
+git clone https://github.com/haoliangsky1/Stat159_Project1.git
+```
+3: In case that I may need to pull anything from the repository, I also added the skeleton remote with command:
+```
+git remote add skeleton https://github.com/haoliangsky1/Stat159_Project1.git
+```
+4: Then check the initial setup is correct with command:
+```
+git remote -v
+```
+5: After making sure that the connection is ready, I, following the file-structure specified in the instruction, created folders and markdown files with command including `mkdir` and `touch`, and add those new files to the remote repository with command:
+
+Adding all files:
+```
+git add .
+```
+Commit the new changes with committing message:
+```
+git commit -m ‘First Commit’
+```
+Push the files to remote repository:
+```
+git push origin master
+```
+Check the commit status:
+```
+git status
+```
+
+The process was made possible largely because the instructions are detailed on the project websites. [Stack Overflow](http://stackoverflow.com/) has at least part of the answer for almost every related problems. And [Wikipedia](https://en.wikipedia.org/wiki/Main_Page) offers a lot of explanation with their citation well listed. With these help, the completion of the project was quite fluid.
+
+The information gathering is quite simple and straightforward due to thorough discussion on the internet. The most challenging part happened when I created a few empty directory on my local working environment and tried to commit them to the remote repository. I followed the instruction as usual, but failed. It took me a few searches to realize that GitHub does not allow empty directories to be pushed. I then solved this by creating actual markdown files inside the directories.
+
+The write-up of this paper took the credit for consuming the most time. For what we need to do was essentially extract the core from a lot of related information so that even complete strangers could have an idea about what these tools are about and what roles they play in the reproducible workflow. 
+
+Learning how to write a `Makefile` also took some time, for I had no related experience before. Luckily the in lectures and labs we spent considerable time on it. The compiling task of the `Makefile` consists of multiple steps:
+
+1. Concatenate the multiple `markdown` files in sections to one single `paper.md` file
+
+2. Use `pandoc` to convert the `paper.md` file to `paper.html` file
+
+3. Write a `clean` command so that the compiled file could be removed if needed.
+
+
+
+I finished this project independently, for most of the information I need was available online.
+
+
+
+# Conclusion
+
+From the discussion above, we see that a few tools are essential in the reproducible workflow. `Makefile` streamlines the compiling process, `Git` makes version control and collaborative development clear and straightforward, `GitHub` helps us to see and use each other work with its remote repository, opening source for the public, `pandoc` makes typesetting and academic writing readable and pretty, and `markdown` enables the content to be converted into multiple formats for specific purpose.

@@ -1,3 +1,5 @@
+
+
 # Discussion
 Here we can discuss about the following tools and their roles in the reproducible workflow.
 
@@ -20,27 +22,34 @@ In the context of reproducible workflow, makefile provides users with simple acc
 
 
 In a project, makefiles essentially work as a rigorous way of recording each step as the researchers or developers were doing it, enabling anyone to reproduce the entire process later. As long as the entire workflow or pipeline stays stable, any update to the project, including new data, different methods or better algorithms, could be easily added. 
+---
 
 ## Git: 
-![](https://raw.githubusercontent.com/ucb-stat159/stat159-fall-2016/master/projects/proj01/images/git-logo.png)
+![](../images/git-logo.png)
 
 `Git` is a version control system that is used for software development and other version control tasks. As Linus Torvalds, its original author said that as a distributed revision control system, Git is aimed at speed, data integrity, and support for distributed, nonlinear workflows. 
 
 Before Git, developers used to have carefully commented on the version of their codes so that they can keep track of the changes or updates they made to the files.
 Using Git, every developer’s computer stores the entire history of the entire project as a “repository”, which enables developers to use Git locally even without internet connection. Because its nature of version control, Git allows a team of developers to collaborate on the same files without interfering other coworkers' progress.
 
+![](../images/Git_operations.png)
 
 
+With the graph of Git’s data structure above, we may have a better understanding about the commands it uses, and how the versions of our files flow from local working directory, to branches, and to the remote.
 
+
+---
 
 
 ## GitHub 
-![](https://raw.githubusercontent.com/ucb-stat159/stat159-fall-2016/master/projects/proj01/images/github-logo.png)
+![](../images/github-logo.png)
+
 
 `GitHub` is a web-based Git repository hosting service. It offers all of the distributed version control and source code management functionality of Gi as well as adding its own features. It provides access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project
 
 ## Pandoc
-![](https://raw.githubusercontent.com/ucb-stat159/stat159-fall-2016/master/projects/proj01/images/pandoc-logo.png)
+![](../images/pandoc-logo.png)
+
 
 `Pandoc` is a document converter, widely used as a writing tool and as a basis for publishing workflows.
 
@@ -48,8 +57,65 @@ Using Git, every developer’s computer stores the entire history of the entire 
 
 2:Pandoc offers relatively simple way to convert the most popular document formats smoothly, including markdown, pdf, HTML, raw text and so on.
 
+---
 
 ## Markdown
-![](https://raw.githubusercontent.com/ucb-stat159/stat159-fall-2016/master/projects/proj01/images/markdown-logo.png)
+![](../images/markdown-logo.png)
+
 
 `Markdown` is a lightweight markup language with plain text formatting syntax designed so that it can converted to HTML, pdf, raw text and many other formats using a tool by the same name. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
+
+## Project Completion Process
+In the process of completing the entire project, I was going through the following steps:
+
+1: I create a new project on my GitHub account called `Stat159-Project1`
+
+2: Then clone the remote repository to my local address using command
+```
+git clone https://github.com/haoliangsky1/Stat159_Project1.git
+```
+3: In case that I may need to pull anything from the repository, I also added the skeleton remote with command:
+```
+git remote add skeleton https://github.com/haoliangsky1/Stat159_Project1.git
+```
+4: Then check the initial setup is correct with command:
+```
+git remote -v
+```
+5: After making sure that the connection is ready, I, following the file-structure specified in the instruction, created folders and markdown files with command including `mkdir` and `touch`, and add those new files to the remote repository with command:
+
+Adding all files:
+```
+git add .
+```
+Commit the new changes with committing message:
+```
+git commit -m ‘First Commit’
+```
+Push the files to remote repository:
+```
+git push origin master
+```
+Check the commit status:
+```
+git status
+```
+
+The process was made possible largely because the instructions are detailed on the project websites. [Stack Overflow](http://stackoverflow.com/) has at least part of the answer for almost every related problems. And [Wikipedia](https://en.wikipedia.org/wiki/Main_Page) offers a lot of explanation with their citation well listed. With these help, the completion of the project was quite fluid.
+
+The information gathering is quite simple and straightforward due to thorough discussion on the internet. The most challenging part happened when I created a few empty directory on my local working environment and tried to commit them to the remote repository. I followed the instruction as usual, but failed. It took me a few searches to realize that GitHub does not allow empty directories to be pushed. I then solved this by creating actual markdown files inside the directories.
+
+The write-up of this paper took the credit for consuming the most time. For what we need to do was essentially extract the core from a lot of related information so that even complete strangers could have an idea about what these tools are about and what roles they play in the reproducible workflow. 
+
+Learning how to write a `Makefile` also took some time, for I had no related experience before. Luckily the in lectures and labs we spent considerable time on it. The compiling task of the `Makefile` consists of multiple steps:
+
+1. Concatenate the multiple `markdown` files in sections to one single `paper.md` file
+
+2. Use `pandoc` to convert the `paper.md` file to `paper.html` file
+
+3. Write a `clean` command so that the compiled file could be removed if needed.
+
+
+
+I finished this project independently, for most of the information I need was available online.
+
