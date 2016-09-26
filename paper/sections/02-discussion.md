@@ -71,7 +71,7 @@ With only a few years of development, GitHub has been the core of open source pr
 ![](../images/markdown-logo.png)
 
 
-`Markdown` is a lightweight markup language with plain text formatting syntax designed so that it can converted to HTML, pdf, raw text and many other formats using a tool by the same name. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
+`Markdown` is a lightweight markup language with plain text formatting syntax designed so that it can converted to HTML, pdf, raw text and many other formats using a tool by the same name. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor. It provides much freedom in creating customized documents.
 
 ---
 
@@ -128,5 +128,5 @@ Learning how to write a `Makefile` also took some time, for I had no related exp
 
 
 
-I finished this project independently, for most of the information I need was available online.
+I finished this project independently, for most of the information I need was available online. Because of the nature of lives of college students, I could not find a large trunk time solely for this project. Instead, I split up the project into shorter parts and did them one by one. In the process, I also get used to committing any changes I made to the files often and with more and more succinct and reader-friendly commit messages so that I can pick up where I was quickly.
 
