@@ -13,12 +13,13 @@
 
 </div>
 <h1 id="abstract">Abstract</h1>
-<p>This is a paper about how I make use of the computational tools covered so far in the course in order to complete this project assignment.</p>
-<p>In this paper, I will talk about some of the essential tools and the roles they play in reproducible workflow, including <code>Makefile</code>, <code>Git</code>, <code>GitHub</code>, <code>pandoc</code>, and <code>Markdown</code>.</p>
-<p>Also, I will talk about the resources that I used in order to complete this job, the relatively straightforward and more challenge parts in the process.</p>
+<p>This is a paper about how I make use of the computational tools covered so far in the course in order to complete this project assignment for Statistics 159, Fall 2016 at UC Berkeley.</p>
+<p>In this paper, I will talk about some of the essential tools and the roles they play in reproducible workflow, primarily including <code>Makefile</code>, <code>Git</code>, <code>GitHub</code>, <code>Pandoc</code>, and <code>Markdown</code>.</p>
+<p>Also, I will talk about what kind of resources and help I used in order to finish this job, which parts are challenging, which parts are relatively straightforward, and how much time I spent on this project.</p>
 <h1 id="introduction">Introduction</h1>
-<p>Surfing on the edge of exploding information and data, the need for reproducible approach of scientific research is growing. This paper is trying to answer some of the very basic questions in reproducibility: what are some important tools, and what roles do they play in the reproducible workflow.</p>
-<p>In the following paragraphs, we will discuss <code>Markdown</code> and how it modularized and simplifies the compiling process; <code>Git</code> and how this version control system helps to track development and enable collaborative working style; <code>GitHub</code> and how its source code management system and distributed version control makes collaboration and open source projects more accessible; <code>pandoc</code> and how it helps scholarly writing and workflow publishing; and <code>Markdown</code> and how it makes formatting on computer as easy as on paper.</p>
+<p>Surfing on the edge of exploding amount of information and data, we can easily realize the need for reproducible approach of scientific research. This paper is trying to answer some of the very basic questions in reproducibility: what are some important tools, and what roles do they play in the reproducible workflow.</p>
+<p>In the following paragraphs, we would introduce <code>Makefile</code> and how it modularized and simplifies the compiling process; <code>Git</code> and how this version control system helps to track development and enable collaborative working style; <code>GitHub</code> and how its source code management system and distributed version control makes collaboration and open source projects more accessible; <code>pandoc</code> and how it helps scholarly writing and workflow publishing; and <code>Markdown</code> and how it makes formatting on computer as easy as on paper.</p>
+<p>Continued, we would discuss more detailed use and implementation of these tools, including how we used <code>Git</code> and <code>GitHub</code> to create repository and the file structures required for this project, my personal experience of learning and using these tools, and more general description about the overall experience.</p>
 <h1 id="discussion">Discussion</h1>
 <p>Here we can discuss about the following tools and their roles in the reproducible workflow.</p>
 <hr />
@@ -69,7 +70,7 @@
 <img src="../images/markdown-logo.png" />
 
 </div>
-<p><code>Markdown</code> is a lightweight markup language with plain text formatting syntax designed so that it can converted to HTML, pdf, raw text and many other formats using a tool by the same name. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.</p>
+<p><code>Markdown</code> is a lightweight markup language with plain text formatting syntax designed so that it can converted to HTML, pdf, raw text and many other formats using a tool by the same name. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor. It provides much freedom in creating customized documents.</p>
 <hr />
 <h2 id="project-completion-process">Project Completion Process</h2>
 <p>In the process of completing the entire project, I was going through the following steps:</p>
@@ -101,8 +102,9 @@ git clone https://github.com/haoliangsky1/Stat159_Project1.git</code></pre>
 <li><p>Use <code>pandoc</code> to convert the <code>paper.md</code> file to <code>paper.html</code> file</p></li>
 <li><p>Write a <code>clean</code> command so that the compiled file could be removed if needed.</p></li>
 </ol>
-<p>I finished this project independently, for most of the information I need was available online.</p>
+<p>I finished this project independently, for most of the information I need was available online. Because of the nature of lives of college students, I could not find a large trunk time solely for this project. Instead, I split up the project into shorter parts and did them one by one. In the process, I also get used to committing any changes I made to the files often and with more and more succinct and reader-friendly commit messages so that I can pick up where I was quickly.</p>
 <h1 id="conclusion">Conclusion</h1>
 <p>From the discussion above, we see that a few tools are essential in the reproducible workflow. <code>Makefile</code> streamlines the compiling process, <code>Git</code> makes version control and collaborative development clear and straightforward, <code>GitHub</code> helps us to see and use each other work with its remote repository, opening source for the public, <code>pandoc</code> makes typesetting and academic writing readable and pretty, and <code>markdown</code> enables the content to be converted into multiple formats for specific purpose.</p>
+<p>The quest of creating the culture of reproducible and collaborative science would not be easy. With these tools, I hope that more and more people would be willing to and be able to join the community of open-source scientific research.</p>
 </body>
 </html>

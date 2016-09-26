@@ -3,21 +3,23 @@
 
 # Abstract
 
-This is a paper about how I make use of the computational tools covered so far in the course in order to complete this project assignment.
+This is a paper about how I make use of the computational tools covered so far in the course in order to complete this project assignment for Statistics 159, Fall 2016 at UC Berkeley.
 
 
-In this paper, I will talk about some of the essential tools and the roles they play in reproducible workflow, including `Makefile`, `Git`, `GitHub`, `pandoc`, and `Markdown`.
+In this paper, I will talk about some of the essential tools and the roles they play in reproducible workflow, primarily including `Makefile`, `Git`, `GitHub`, `Pandoc`, and `Markdown`.
 
 
-Also, I will talk about the resources that I used in order to complete this job, the relatively straightforward and more challenge parts in the process.
+Also, I will talk about what kind of resources and help I used in order to finish this job, which parts are challenging, which parts are relatively straightforward, and how much time I spent on this project.
 
 
 # Introduction
 
-Surfing on the edge of exploding information and data, the need for reproducible approach of scientific research is growing. This paper is trying to answer some of the very basic questions in reproducibility: what are some important tools, and what roles do they play in the reproducible workflow.
+Surfing on the edge of exploding amount of information and data, we can easily realize the need for reproducible approach of scientific research. This paper is trying to answer some of the very basic questions in reproducibility: what are some important tools, and what roles do they play in the reproducible workflow.
 
 
-In the following paragraphs, we will discuss `Markdown` and how it modularized and simplifies the compiling process; `Git` and how this version control system helps to track development and enable collaborative working style; `GitHub` and how its source code management system and distributed version control makes collaboration and open source projects more accessible; `pandoc` and how it helps scholarly writing and workflow publishing; and `Markdown` and how it makes formatting on computer as easy as on paper.
+In the following paragraphs, we would introduce `Makefile` and how it modularized and simplifies the compiling process; `Git` and how this version control system helps to track development and enable collaborative working style; `GitHub` and how its source code management system and distributed version control makes collaboration and open source projects more accessible; `pandoc` and how it helps scholarly writing and workflow publishing; and `Markdown` and how it makes formatting on computer as easy as on paper.
+
+Continued, we would discuss more detailed use and implementation of these tools, including how we used `Git` and `GitHub` to create repository and the file structures required for this project, my personal experience of learning and using these tools, and more general description about the overall experience.
 
 
 # Discussion
@@ -91,7 +93,7 @@ With only a few years of development, GitHub has been the core of open source pr
 ![](../images/markdown-logo.png)
 
 
-`Markdown` is a lightweight markup language with plain text formatting syntax designed so that it can converted to HTML, pdf, raw text and many other formats using a tool by the same name. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor.
+`Markdown` is a lightweight markup language with plain text formatting syntax designed so that it can converted to HTML, pdf, raw text and many other formats using a tool by the same name. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor. It provides much freedom in creating customized documents.
 
 ---
 
@@ -148,10 +150,14 @@ Learning how to write a `Makefile` also took some time, for I had no related exp
 
 
 
-I finished this project independently, for most of the information I need was available online.
+I finished this project independently, for most of the information I need was available online. Because of the nature of lives of college students, I could not find a large trunk time solely for this project. Instead, I split up the project into shorter parts and did them one by one. In the process, I also get used to committing any changes I made to the files often and with more and more succinct and reader-friendly commit messages so that I can pick up where I was quickly.
 
 
 
 # Conclusion
 
 From the discussion above, we see that a few tools are essential in the reproducible workflow. `Makefile` streamlines the compiling process, `Git` makes version control and collaborative development clear and straightforward, `GitHub` helps us to see and use each other work with its remote repository, opening source for the public, `pandoc` makes typesetting and academic writing readable and pretty, and `markdown` enables the content to be converted into multiple formats for specific purpose.
+
+
+The quest of creating the culture of reproducible and collaborative science would not be easy. With these tools, I hope that more and more people would be willing to and be able to join the community of open-source scientific research. 
+
