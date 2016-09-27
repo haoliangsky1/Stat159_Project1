@@ -1,7 +1,8 @@
-![](../images/stat159-logo.png)
+<img src='../images/stat159-logo.png' width='400' />
 
+# Statistics 159: Reproducible and Collaborative Research and Data Science Project 1
 
-# Abstract
+## Abstract
 
 This is a paper about how I make use of the computational tools covered so far in the course in order to complete this project assignment for Statistics 159, Fall 2016 at UC Berkeley.
 
