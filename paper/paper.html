@@ -8,22 +8,20 @@
   <style type="text/css">code{white-space: pre;}</style>
 </head>
 <body>
-<div class="figure">
-<img src="../images/stat159-logo.png" />
-
-</div>
-<h1 id="abstract">Abstract</h1>
+<p><img src='../images/stat159-logo.png' width='400' /></p>
+<h1 id="statistics-159-reproducible-and-collaborative-research-and-data-science-project-1">Statistics 159: Reproducible and Collaborative Research and Data Science Project 1</h1>
+<h2 id="abstract">Abstract</h2>
 <p>This is a paper about how I make use of the computational tools covered so far in the course in order to complete this project assignment for Statistics 159, Fall 2016 at UC Berkeley.</p>
 <p>In this paper, I will talk about some of the essential tools and the roles they play in reproducible workflow, primarily including <code>Makefile</code>, <code>Git</code>, <code>GitHub</code>, <code>Pandoc</code>, and <code>Markdown</code>.</p>
 <p>Also, I will talk about what kind of resources and help I used in order to finish this job, which parts are challenging, which parts are relatively straightforward, and how much time I spent on this project.</p>
-<h1 id="introduction">Introduction</h1>
+<h2 id="introduction">Introduction</h2>
 <p>Surfing on the edge of exploding amount of information and data, we can easily realize the need for reproducible approach of scientific research. This paper is trying to answer some of the very basic questions in reproducibility: what are some important tools, and what roles do they play in the reproducible workflow.</p>
 <p>In the following paragraphs, we would introduce <code>Makefile</code> and how it modularized and simplifies the compiling process; <code>Git</code> and how this version control system helps to track development and enable collaborative working style; <code>GitHub</code> and how its source code management system and distributed version control makes collaboration and open source projects more accessible; <code>pandoc</code> and how it helps scholarly writing and workflow publishing; and <code>Markdown</code> and how it makes formatting on computer as easy as on paper.</p>
 <p>Continued, we would discuss more detailed use and implementation of these tools, including how we used <code>Git</code> and <code>GitHub</code> to create repository and the file structures required for this project, my personal experience of learning and using these tools, and more general description about the overall experience.</p>
-<h1 id="discussion">Discussion</h1>
+<h2 id="discussion">Discussion</h2>
 <p>Here we can discuss about the following tools and their roles in the reproducible workflow.</p>
 <hr />
-<h2 id="makefile">Makefile</h2>
+<h3 id="makefile">Makefile</h3>
 <p>In most of open-source projects, <code>Makefile</code> is an essential file. It should contain a set of directives used with the <em>make</em> build automation tool. There are usually five types contents that makefiles contain:</p>
 <ul>
 <li><p>Explicit rules: saying when and how to remake one or more files in the related project, which are called the rule’s targets. They list the other files that the targets depend on, called the prerequisites of the target, and some also give a recipe so as for users to create, update and customize the target for their own need.</p></li>
@@ -35,44 +33,29 @@
 <p>In the context of reproducible workflow, makefile provides users with simple access to the project materials and results. Compiling the source code files can be exhausting, especially when multiple source files of different types are involved in the compiling process. If new users were not familiar with the projects, as in most cases, the process could be even more intimidating. Makefiles are a solution to simplify this task.</p>
 <p>In a project, makefiles essentially work as a rigorous way of recording each step as the researchers or developers were doing it, enabling anyone to reproduce the entire process later. As long as the entire workflow or pipeline stays stable, any update to the project, including new data, different methods or better algorithms, could be easily added. In this sense, we will not really use <code>make</code> for compiling, but for automating and streamlining tasks. Also, because it only executes the files that have changed, it enables the users to track timestamps, and to have a better idea about the workflow.</p>
 <hr />
-<h2 id="git">Git:</h2>
-<div class="figure">
-<img src="../images/git-logo.png" />
-
-</div>
+<h3 id="git">Git:</h3>
+<p><img src='../images/git-logo.png' width='300' /></p>
 <p><code>Git</code> is a version control system that is used for software development and other version control tasks. As Linus Torvalds, its original author said that as a distributed revision control system, Git is aimed at speed, data integrity, and support for distributed, nonlinear workflows.</p>
 <p>Before Git, developers used to have carefully commented on the version of their codes so that they can keep track of the changes or updates they made to the files. Using Git, every developer’s computer stores the entire history of the entire project as a “repository”, which enables developers to use Git locally even without internet connection. Because its nature of version control, Git allows a team of developers to collaborate on the same files without interfering other coworkers' progress.</p>
-<div class="figure">
-<img src="../images/Git_operations.svg" />
-
-</div>
+<p><img src='../images/Git_operations.svg' width='400' /></p>
 <p>With the graph of Git’s data structure above, we may have a better understanding about the commands it uses, and how the versions of our files flow from local working directory, to branches, and to the remote. Such data structure streamlines the version control process, making adding and committing relatively cheap, and unoding fairly simple. The existence of branches ensures that even when multiple developers were working on the same project, anyone could connect his or her current work to others to keep up with the progress.</p>
 <hr />
-<h2 id="github">GitHub</h2>
-<div class="figure">
-<img src="../images/github-logo.png" />
-
-</div>
+<h3 id="github">GitHub</h3>
+<p><img src='../images/github-logo.png' width='300' /></p>
 <p><code>GitHub</code> is a web-based Git repository hosting service. It offers all of the distributed version control and source code management functionality of Gi as well as adding its own features. It provides access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project. More importantly, GitHub offers a nice looking Graphical User Interface so that the structure of the entire project is in orderly layout. And it provides convenient way to save and search for specific version based on the commit message, the file version, the file format and so on.</p>
 <p>With only a few years of development, GitHub has been the core of open source projects, where developers store, exchange, trade and talk about their codes. Its distributed nature frees developers from constraints on working environment. People can pick up their work whenever and wherever they like, as long as they have a computer and network connection. It is not just a repository, but even social network for programmers.</p>
 <hr />
-<h2 id="pandoc">Pandoc</h2>
-<div class="figure">
-<img src="../images/pandoc-logo.png" />
-
-</div>
+<h3 id="pandoc">Pandoc</h3>
+<p><img src='../images/pandoc-logo.png' width='300' /></p>
 <p><code>Pandoc</code> is a document converter, widely used as a writing tool and as a basis for publishing workflows.</p>
 <p>1: Pandoc is doing extremely well when different markdown syntax extensions are involved, especially for scholarly works. It provides multiple different methods of rendering math, including MathJax, translation to MathML and Microsoft Word-based LaTeX math. It also includes a powerful system for automatic citation and bibliographies with pandoc-citeproc.</p>
 <p>2:Pandoc offers relatively simple way to convert the most popular document formats smoothly, including markdown, pdf, HTML, raw text and so on.</p>
 <hr />
-<h2 id="markdown">Markdown</h2>
-<div class="figure">
-<img src="../images/markdown-logo.png" />
-
-</div>
+<h3 id="markdown">Markdown</h3>
+<p><img src='../images/markdown-logo.png' width='300' /></p>
 <p><code>Markdown</code> is a lightweight markup language with plain text formatting syntax designed so that it can converted to HTML, pdf, raw text and many other formats using a tool by the same name. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor. It provides much freedom in creating customized documents.</p>
 <hr />
-<h2 id="project-completion-process">Project Completion Process</h2>
+<h3 id="project-completion-process">Project Completion Process</h3>
 <p>In the process of completing the entire project, I was going through the following steps:</p>
 <p>1: I create a new project on my GitHub account called <code>Stat159-Project1</code></p>
 <p>2: Then initialize and clone the remote repository to my local address using command</p>
@@ -103,7 +86,7 @@ git clone https://github.com/haoliangsky1/Stat159_Project1.git</code></pre>
 <li><p>Write a <code>clean</code> command so that the compiled file could be removed if needed.</p></li>
 </ol>
 <p>I finished this project independently, for most of the information I need was available online. Because of the nature of lives of college students, I could not find a large trunk time solely for this project. Instead, I split up the project into shorter parts and did them one by one. In the process, I also get used to committing any changes I made to the files often and with more and more succinct and reader-friendly commit messages so that I can pick up where I was quickly.</p>
-<h1 id="conclusion">Conclusion</h1>
+<h2 id="conclusion">Conclusion</h2>
 <p>From the discussion above, we see that a few tools are essential in the reproducible workflow. <code>Makefile</code> streamlines the compiling process, <code>Git</code> makes version control and collaborative development clear and straightforward, <code>GitHub</code> helps us to see and use each other work with its remote repository, opening source for the public, <code>pandoc</code> makes typesetting and academic writing readable and pretty, and <code>markdown</code> enables the content to be converted into multiple formats for specific purpose.</p>
 <p>The quest of creating the culture of reproducible and collaborative science would not be easy. With these tools, I hope that more and more people would be willing to and be able to join the community of open-source scientific research.</p>
 </body>

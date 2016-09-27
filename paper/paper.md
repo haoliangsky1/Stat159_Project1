@@ -1,7 +1,8 @@
-![](../images/stat159-logo.png)
+<img src='../images/stat159-logo.png' width='400' />
 
+# Statistics 159: Reproducible and Collaborative Research and Data Science Project 1
 
-# Abstract
+## Abstract
 
 This is a paper about how I make use of the computational tools covered so far in the course in order to complete this project assignment for Statistics 159, Fall 2016 at UC Berkeley.
 
@@ -12,7 +13,7 @@ In this paper, I will talk about some of the essential tools and the roles they 
 Also, I will talk about what kind of resources and help I used in order to finish this job, which parts are challenging, which parts are relatively straightforward, and how much time I spent on this project.
 
 
-# Introduction
+## Introduction
 
 Surfing on the edge of exploding amount of information and data, we can easily realize the need for reproducible approach of scientific research. This paper is trying to answer some of the very basic questions in reproducibility: what are some important tools, and what roles do they play in the reproducible workflow.
 
@@ -22,12 +23,12 @@ In the following paragraphs, we would introduce `Makefile` and how it modularize
 Continued, we would discuss more detailed use and implementation of these tools, including how we used `Git` and `GitHub` to create repository and the file structures required for this project, my personal experience of learning and using these tools, and more general description about the overall experience.
 
 
-# Discussion
+## Discussion
 Here we can discuss about the following tools and their roles in the reproducible workflow.
 
 ---
 
-## Makefile
+### Makefile
 
 In most of open-source projects, `Makefile` is an essential file. It should contain a set of directives used with the *make* build automation tool. There are usually five types contents that makefiles contain:
 
@@ -49,15 +50,15 @@ In a project, makefiles essentially work as a rigorous way of recording each ste
 
 ---
 
-## Git: 
-![](../images/git-logo.png)
+### Git: 
+<img src='../images/git-logo.png' width='300' />
 
 `Git` is a version control system that is used for software development and other version control tasks. As Linus Torvalds, its original author said that as a distributed revision control system, Git is aimed at speed, data integrity, and support for distributed, nonlinear workflows. 
 
 Before Git, developers used to have carefully commented on the version of their codes so that they can keep track of the changes or updates they made to the files.
 Using Git, every developer’s computer stores the entire history of the entire project as a “repository”, which enables developers to use Git locally even without internet connection. Because its nature of version control, Git allows a team of developers to collaborate on the same files without interfering other coworkers' progress.
 
-![](../images/Git_operations.svg)
+<img src='../images/Git_operations.svg' width='400' />
 
 
 With the graph of Git’s data structure above, we may have a better understanding about the commands it uses, and how the versions of our files flow from local working directory, to branches, and to the remote. Such data structure streamlines the version control process, making adding and committing relatively cheap, and unoding fairly simple. The existence of branches ensures that even when multiple developers were working on the same project, anyone could connect his or her current work to others to keep up with the progress.
@@ -66,8 +67,8 @@ With the graph of Git’s data structure above, we may have a better understandi
 ---
 
 
-## GitHub 
-![](../images/github-logo.png)
+### GitHub 
+<img src='../images/github-logo.png' width='300' />
 
 
 `GitHub` is a web-based Git repository hosting service. It offers all of the distributed version control and source code management functionality of Gi as well as adding its own features. It provides access control and several collaboration features such as bug tracking, feature requests, task management, and wikis for every project. More importantly, GitHub offers a nice looking Graphical User Interface so that the structure of the entire project is in orderly layout. And it provides convenient way to save and search for specific version based on the commit message, the file version, the file format and so on.
@@ -77,8 +78,8 @@ With only a few years of development, GitHub has been the core of open source pr
 
 ---
 
-## Pandoc
-![](../images/pandoc-logo.png)
+### Pandoc
+<img src='../images/pandoc-logo.png' width='300' />
 
 
 `Pandoc` is a document converter, widely used as a writing tool and as a basis for publishing workflows.
@@ -89,15 +90,15 @@ With only a few years of development, GitHub has been the core of open source pr
 
 ---
 
-## Markdown
-![](../images/markdown-logo.png)
+### Markdown
+<img src='../images/markdown-logo.png' width='300' />
 
 
 `Markdown` is a lightweight markup language with plain text formatting syntax designed so that it can converted to HTML, pdf, raw text and many other formats using a tool by the same name. Markdown is often used to format readme files, for writing messages in online discussion forums, and to create rich text using a plain text editor. It provides much freedom in creating customized documents.
 
 ---
 
-## Project Completion Process
+### Project Completion Process
 In the process of completing the entire project, I was going through the following steps:
 
 1: I create a new project on my GitHub account called `Stat159-Project1`
@@ -154,7 +155,7 @@ I finished this project independently, for most of the information I need was av
 
 
 
-# Conclusion
+## Conclusion
 
 From the discussion above, we see that a few tools are essential in the reproducible workflow. `Makefile` streamlines the compiling process, `Git` makes version control and collaborative development clear and straightforward, `GitHub` helps us to see and use each other work with its remote repository, opening source for the public, `pandoc` makes typesetting and academic writing readable and pretty, and `markdown` enables the content to be converted into multiple formats for specific purpose.
 

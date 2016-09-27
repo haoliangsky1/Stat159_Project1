@@ -10,7 +10,7 @@ out = paper/paper.html
 
 
 # wildcard
-mds = $(wildcard sections/*.md)
+mds = $(wildcard paper/sections/*.md)
 # mds = sections/*.md might word, but depends on the command used
 
 
